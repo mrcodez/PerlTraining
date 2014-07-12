@@ -1,6 +1,8 @@
 use strict;
 use warnings;
 
+use Data::Dumper;
+
 $|=1;
 
 sub main() {
@@ -19,8 +21,14 @@ sub main() {
 				my @values = split(",", $line);
 				
 				# access the columns of the array
-				print $values[1]."\n";
+				#print $values[1]."\n";
+				
+				#print join "|", @values;
+				
+				print Dumper(@values);
 		}
+		
+		
 		
 		close(INPUT);
 
